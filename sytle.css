@@ -205,15 +205,21 @@ img:hover{
     background-color: black;
     width:  400px;
     padding: 20px 30px;
-    border-radius: 30px;
-    /* margin-left: 40px; */
-    /* display: flex;
-    align-items: center; */
+    border-radius: 30px ;
+    box-shadow:  0 0 0 3px aqua;
+    transition: 0.3s ease aqua;
 
+     
 }
 
-#contact{
+/* .form:hover{
+    transform: scale(1.01);
+} */
 
+#contact{
+    border-color: aqua;
+    padding: 30px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -242,10 +248,11 @@ img:hover{
 textarea{
     height: 150px;
     width: 100%;
+    /* margin: 20px 0; */
     margin-top: 20px;
     background: rgb(22, 22, 22);
     color: aqua;
-    padding: 0 20px 0 10px;
+    padding: 0 10px 0 20px;
 }
 
 .form button{   
@@ -261,7 +268,7 @@ textarea{
 
 
 .form button:hover{
-    color: aqua;
+    color: white;
     background-color: aqua;
     transform: scale(1.1);
 }
