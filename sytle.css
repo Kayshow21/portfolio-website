@@ -1,8 +1,9 @@
 *{ 
-   box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    border: 0px; 
+   
+    margin: 0;
+    padding: 0;
+    border: none; 
+    box-sizing: border-box;
     text-decoration: none; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
@@ -22,6 +23,8 @@ body{
     align-items: center;
     padding:0 12%;
     position: fixed;
+    top:0;
+    backdrop-filter: blur(20px);
 }
 .logo{
     font-size: 30px;
@@ -56,7 +59,8 @@ span{
  }
 
  section{
-    width: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
     padding: 80px 12%;
  }
  /* img{
@@ -70,14 +74,15 @@ span{
     margin-top: 5px;
 }
 h1{
-    font-size: 50px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 .info h3{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 100;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .info p{
     line-height: 1.5;
@@ -135,6 +140,7 @@ img{
     box-shadow:0 0 20px orange;
     width: 400px;
     height: 400px;
+    margin-top: 30px;
     transition: 0.3s ease;
 }
 img:hover{
@@ -158,7 +164,7 @@ img:hover{
 }
 
 .Services{   
-    width: 49%;
+    
     display: flex;  
     justify-content: center;
     align-items: center;  
@@ -173,7 +179,7 @@ img:hover{
     font-weight: 800;
 }
 .Services div{   
-    width: 100%;
+    width: 49%;
     background-color: aqua;  
     border-radius: 20px;
     padding: 40px;
@@ -195,7 +201,7 @@ img:hover{
     transform: scale(1.01);
     background-color: white;
 } 
-form{
+.form{
     background-color: black;
     width:  400px;
     padding: 20px 30px;
@@ -205,15 +211,21 @@ form{
     align-items: center; */
 
 }
-form h2{
+
+#contact{
+
+    justify-content: center;
+    align-items: center;
+}
+.form h2{
     line-height: 1.5;
 }
- input{
+ .form input{
     width: 100%;
     height: 40px;
     border-radius: 30px;
-    margin-top: 20px;
-    padding: 0 20px 0 10px;
+    margin: 20px  0;
+    /* padding: 0 20px 0 10px; */
     color: aqua;
     background: rgb(22, 22, 22);
  }  
@@ -240,6 +252,7 @@ textarea{
     height: 40px;
     width: 100%;
     margin-top: 20px;
+    padding: 10px;
     color: aqua;
     background: rgb(22, 22, 22);
     transition: 0 0.3s ease;
@@ -250,24 +263,26 @@ textarea{
 .form button:hover{
     color: aqua;
     background-color: aqua;
-    transition: 0 0 2px;
+    transform: scale(1.1);
 }
+
+
 #menu,
 #cancel {
     font-size: 40px;
     color: aqua;
-    display: none;
+    display: none ;
 }
 
-@media screen and (max-width: 776px) {
+@media screen and (max-width: 750px) {
    .navbar {
-    display: none;
+    /* display: none; */
     position: absolute;
     right: 20%;
     top: 40%;
    }
     
-}
+
 
 .navbar a{
 display: block;
@@ -275,7 +290,7 @@ margin: 20px 0;
 
 }
 
-#menu{
+#menu,#cancel{
     display: block;
 }
 
@@ -302,6 +317,12 @@ h1{
 
 .Services div{
     width: 100%;
+}
+
+.hidden{
+    display: none !important;
+}
+
 }
     /* padding: 40px;
     justify-content: center;

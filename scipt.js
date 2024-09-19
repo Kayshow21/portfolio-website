@@ -135,6 +135,22 @@
 
 // DOM manipulation
 
-let h1 = document.querySelector("h1");
+// let h1 = document.querySelector("h1");
 
 // h1.textContent = "This is a Web Developers Page"
+
+let menu = document.querySelector("#menu");
+let cancel = document.querySelector("#cancel");
+let navbar = document.querySelector(".navbar");
+
+menu.addEventListener("click",function(){
+    menu.classList.toggle("hidden");
+    cancel.classList.toggle("hidden");
+    navbar.classList.toggle("hidden");
+})
+
+cancel.addEventListener("click", function(){
+    cancel.classList.toggle("hidden");
+    menu.classList.toggle("hidden");
+    navbar.classList.toggle("hidden");
+})
